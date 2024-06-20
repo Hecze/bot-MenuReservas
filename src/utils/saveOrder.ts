@@ -19,9 +19,9 @@ export async function saveOrderToSheet(order: string) {
 
   const spreadsheetId = SPREADSHEET_ID;
 
-  const [puerta, nombre, plato, horaRecojo] = order.split(' - ');
+  const [puerta, nombre, plato, horaRecojo] = order.split('-');
 
-  if (!puerta || !nombre || !plato || !horaRecojo) {
+  if (!puerta || !nombre || !plato ) {
     console.error('Formato de pedido incorrecto.');
     return;
   }

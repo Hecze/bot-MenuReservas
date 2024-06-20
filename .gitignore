@@ -1,8 +1,9 @@
 # Ignorar todo en node_modules
-node_modules/
+node_modules/*
 
 # Incluir la carpeta específica
 !node_modules/@builderbot
+!node_modules/@builderbot/*
 
 # Otros archivos y carpetas que quieres ignorar
 .env

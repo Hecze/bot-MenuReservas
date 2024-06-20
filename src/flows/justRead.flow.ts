@@ -6,7 +6,7 @@ const flowJustRead = addKeyword(EVENTS.ACTION).addAction(async () => {
 }).addAction({ capture: true }, async (ctx, { endFlow, fallBack}) => {
     
     //si escribimos insertar o encender activamos el chatbot redirigiendo al flujo principal
-    if (ctx.body.toLocaleLowerCase().includes('-') ) {
+    if (ctx.body.toLocaleLowerCase().includes('-') && !ctx.body.toLocaleLowerCase().includes('media') ) {
         await saveOrderToSheet(ctx.body);
     }
 
